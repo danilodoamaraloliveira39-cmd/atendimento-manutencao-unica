@@ -1,190 +1,99 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unica Serviços de Instalação e Manutenção LTDA</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        .hidden-section {
-            display: none;
-        }
-        .hidden-section.active {
-            display: block;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Central de Atendimento</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#f5e6f0;
+color:white;
+text-align:center;
+}
+
+.container{
+padding:40px 20px;
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+margin-bottom:10px;
+color:#d946a6;
+}
+
+.sub{
+color:#c084fc;
+margin-bottom:40px;
+}
+
+.card{
+background:#f3d5e8;
+margin:15px auto;
+padding:20px;
+border-radius:12px;
+max-width:320px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card h3{
+margin-top:0;
+color:#d946a6;
+}
+
+.card p{
+color:#9d4edd;
+}
+
+.btn{
+display:block;
+background:#d946a6;
+color:white;
+text-decoration:none;
+padding:12px;
+border-radius:8px;
+margin-top:10px;
+font-weight:bold;
+}
+
+.btn:hover{
+background:#c239a3;
+opacity:0.9;
+}
+
+</style>
 </head>
-<body class="font-sans bg-gray-100 text-gray-800">
 
-    <!-- Header -->
-    <header class="bg-green-800 text-white p-6 shadow-md">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-3xl font-bold">Unica Serviços de Instalação e Manutenção LTDA</h1>
-            <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="#" onclick="showSection('home' )" class="hover:underline cursor-pointer">Início</a></li>
-                    <li><a href="#" onclick="showSection('servicos')" class="hover:underline cursor-pointer">Serviços</a></li>
-                    <li><a href="#" onclick="showSection('contato')" class="hover:underline cursor-pointer">Contato</a></li>
-                    <li><a href="#" onclick="showSection('terms')" class="hover:underline cursor-pointer">Termos de Uso</a></li>
-                    <li><a href="#" onclick="showSection('privacy')" class="hover:underline cursor-pointer">Política de Privacidade</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<body>
 
-    <!-- HOME SECTION -->
-    <div id="home-section" class="hidden-section active">
-        <!-- Hero Section -->
-        <section class="bg-green-700 text-white py-20 text-center">
-            <div class="container mx-auto">
-                <h2 class="text-4xl font-bold mb-4">Soluções Profissionais em Instalação e Manutenção</h2>
-                <p class="text-xl mb-8">Especialistas em serviços elétricos, pintura e climatização para sua residência e negócio.</p>
-                <a href="#" onclick="showSection('servicos')" class="bg-yellow-500 text-green-900 font-bold py-3 px-8 rounded-full hover:bg-yellow-400 transition duration-300 cursor-pointer">Conheça Nossos Serviços</a>
-            </div>
-        </section>
-    </div>
+<div class="container">
 
-    <!-- SERVICES SECTION -->
-    <div id="servicos-section" class="hidden-section">
-        <section class="container mx-auto py-16 px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Nossos Serviços</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                    <h3 class="text-xl font-semibold mb-4">Instalação e Manutenção Elétrica</h3>
-                    <p class="text-gray-700">Oferecemos serviços completos de instalação e manutenção elétrica, com profissionais qualificados e experientes, garantindo segurança e conformidade com as normas técnicas vigentes.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                    <h3 class="text-xl font-semibold mb-4">Serviços de Pintura de Edifícios</h3>
-                    <p class="text-gray-700">Realizamos serviços de pintura em geral para edifícios, com acabamento de qualidade superior, utilizando materiais de primeira linha e técnicas modernas de aplicação.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                    <h3 class="text-xl font-semibold mb-4">Sistemas de Ar Condicionado e Ventilação</h3>
-                    <p class="text-gray-700">Instalação e manutenção de sistemas centrais de ar condicionado, ventilação e refrigeração, com expertise técnica para garantir conforto e eficiência energética.</p>
-                </div>
-            </div>
-        </section>
-    </div>
+<div class="logo">SUPORTE AO CLIENTE</div>
+<div class="sub">Escolha uma opção de atendimento</div>
 
-    <!-- CONTACT SECTION -->
-    <div id="contato-section" class="hidden-section">
-        <section class="bg-gray-200 py-16 px-4">
-            <div class="container mx-auto text-center">
-                <h2 class="text-3xl font-bold mb-8">Entre em Contato</h2>
-                <p class="text-lg mb-4">CNPJ: 12.431.994/0001-80</p>
-                <p class="text-lg mb-4">Endereço: Consulte nossos canais de contato para informações sobre localização</p>
-                <p class="text-lg mb-8">Entre em contato conosco para solicitar orçamentos e informações sobre nossos serviços</p>
-                <a href="mailto:contato@unicaservicos.com.br" class="bg-green-600 text-white font-bold py-3 px-8 rounded-full hover:bg-green-700 transition duration-300">Fale Conosco</a>
-            </div>
-        </section>
-    </div>
+<div class="card">
+<h3>Falar Suporte</h3>
+<p>Fale com um atendente agora</p>
+<a class="btn" href="https://wa.me/5511948990599">Abrir WhatsApp</a>
+</div>
 
-    <!-- TERMS OF USE SECTION -->
-    <div id="terms-section" class="hidden-section">
-        <section class="container mx-auto py-16 px-4">
-            <h2 class="text-3xl font-bold text-center mb-8">Termos de Uso</h2>
-            <div class="bg-white p-8 rounded-lg shadow-lg">
-                <p class="mb-4">Bem-vindo(a) à Unica Serviços de Instalação e Manutenção LTDA. Ao acessar e utilizar nosso website, você concorda em cumprir e estar vinculado(a) aos seguintes termos e condições de uso. Por favor, leia-os atentamente.</p>
+<div class="card">
+<h3>Suporte Técnico</h3>
+<p>Internet lenta ou sem conexão</p>
+<a class="btn" href="https://wa.me/5511948990599">Solicitar Suporte</a>
+</div>
 
-                <h3 class="text-xl font-semibold mt-6 mb-2">1. Aceitação dos Termos</h3>
-                <p class="mb-4">Ao utilizar este website, você reconhece que leu, entendeu e concorda com estes Termos de Uso. Se você não concorda com qualquer parte destes termos, por favor, não utilize nosso website.</p>
+<div class="card">
+<h3>Emitir</h3>
+<p>Atualização</p>
+<a class="btn" href="https://wa.me/5511948990599">Falar com Atendente</a>
+</div>
 
-                <h3 class="text-xl font-semibold mt-6 mb-2">2. Uso do Website</h3>
-                <p class="mb-4">Este website e seu conteúdo são fornecidos para fins informativos e de contato. Você concorda em usar o website apenas para fins lícitos e de maneira que não infrinja os direitos de, ou restrinja ou iniba o uso e o desfrute do website por terceiros.</p>
-
-                <h3 class="text-xl font-semibold mt-6 mb-2">3. Propriedade Intelectual</h3>
-                <p class="mb-4">Todo o conteúdo presente neste website, incluindo textos, gráficos, logotipos, ícones, imagens, clipes de áudio, downloads digitais e compilações de dados, é propriedade da Unica Serviços de Instalação e Manutenção LTDA ou de seus fornecedores de conteúdo e é protegido pelas leis de direitos autorais brasileiras e internacionais.</p>
-
-                <h3 class="text-xl font-semibold mt-6 mb-2">4. Limitação de Responsabilidade</h3>
-                <p class="mb-4">A Unica Serviços de Instalação e Manutenção LTDA não será responsável por quaisquer danos diretos, indiretos, incidentais, consequenciais ou punitivos decorrentes do seu acesso ou uso, ou incapacidade de acessar ou usar este website.</p>
-
-                <h3 class="text-xl font-semibold mt-6 mb-2">5. Links para Terceiros</h3>
-                <p class="mb-4">Nosso website pode conter links para websites de terceiros que não são operados por nós. Não temos controle sobre o conteúdo, políticas de privacidade ou práticas de quaisquer websites ou serviços de terceiros e não assumimos responsabilidade por eles.</p>
-
-                <h3 class="text-xl font-semibold mt-6 mb-2">6. Modificações dos Termos</h3>
-                <p class="mb-4">Reservamo-nos o direito de modificar estes Termos de Uso a qualquer momento. Quaisquer alterações entrarão em vigor imediatamente após a publicação no website. Seu uso continuado do website após tais modificações constituirá sua aceitação dos novos Termos de Uso.</p>
-
-                <h3 class="text-xl font-semibold mt-6 mb-2">7. Lei Aplicável</h3>
-                <p class="mb-4">Estes Termos de Uso serão regidos e interpretados de acordo com as leis da República Federativa do Brasil, sem consideração aos seus princípios de conflitos de leis.</p>
-
-                <p class="mt-8">Para quaisquer dúvidas sobre estes Termos de Uso, entre em contato conosco através dos dados fornecidos em nosso website.</p>
-            </div>
-        </section>
-    </div>
-
-    <!-- PRIVACY POLICY SECTION -->
-    <div id="privacy-section" class="hidden-section">
-        <section class="container mx-auto py-16 px-4">
-            <h2 class="text-3xl font-bold text-center mb-8">Política de Privacidade</h2>
-            <div class="bg-white p-8 rounded-lg shadow-lg">
-                <p class="mb-4">A Unica Serviços de Instalação e Manutenção LTDA está comprometida em proteger a sua privacidade. Esta Política de Privacidade descreve como coletamos, usamos e protegemos as informações pessoais que você nos fornece ao utilizar nosso website.</p>
-
-                <h3 class="text-xl font-semibold mt-6 mb-2">1. Coleta de Informações Pessoais</h3>
-                <p class="mb-4">Coletamos informações pessoais que você nos fornece voluntariamente, como nome, endereço de e-mail, número de telefone e informações sobre sua residência ou negócio, quando você preenche formulários de contato ou se comunica conosco por e-mail ou telefone.</p>
-
-                <h3 class="text-xl font-semibold mt-6 mb-2">2. Uso das Informações</h3>
-                <p class="mb-4">As informações coletadas são utilizadas para:</p>
-                <ul class="list-disc list-inside ml-4 mb-4">
-                    <li>Responder às suas solicitações e perguntas.</li>
-                    <li>Fornecer informações sobre nossos serviços.</li>
-                    <li>Preparar orçamentos e propostas personalizadas.</li>
-                    <li>Melhorar a experiência do usuário em nosso website.</li>
-                    <li>Cumprir obrigações legais e regulatórias.</li>
-                </ul>
-
-                <h3 class="text-xl font-semibold mt-6 mb-2">3. Compartilhamento de Informações</h3>
-                <p class="mb-4">Não vendemos, trocamos ou transferimos suas informações pessoais para terceiros sem o seu consentimento, exceto quando necessário para fornecer um serviço solicitado por você ou quando exigido por lei.</p>
-
-                <h3 class="text-xl font-semibold mt-6 mb-2">4. Cookies e Tecnologias de Rastreamento</h3>
-                <p class="mb-4">Nosso website pode utilizar cookies e outras tecnologias de rastreamento para melhorar a sua experiência de navegação, analisar o tráfego do site e personalizar conteúdo. Você pode configurar seu navegador para recusar cookies, mas isso pode afetar a funcionalidade do site.</p>
-
-                <h3 class="text-xl font-semibold mt-6 mb-2">5. Segurança das Informações</h3>
-                <p class="mb-4">Empregamos medidas de segurança razoáveis para proteger suas informações pessoais contra acesso não autorizado, alteração, divulgação ou destruição. No entanto, nenhuma transmissão de dados pela internet é 100% segura, e não podemos garantir a segurança absoluta das informações.</p>
-
-                <h3 class="text-xl font-semibold mt-6 mb-2">6. Seus Direitos</h3>
-                <p class="mb-4">Você tem o direito de acessar, corrigir, atualizar ou solicitar a exclusão de suas informações pessoais a qualquer momento. Para exercer esses direitos, entre em contato conosco através dos canais informados em nosso website.</p>
-
-                <h3 class="text-xl font-semibold mt-6 mb-2">7. Alterações nesta Política de Privacidade</h3>
-                <p class="mb-4">Podemos atualizar esta Política de Privacidade periodicamente. Quaisquer alterações serão publicadas nesta página, e a data da última atualização será revisada. Recomendamos que você revise esta política regularmente para se manter informado sobre como protegemos suas informações.</p>
-
-                <h3 class="text-xl font-semibold mt-6 mb-2">8. Contato</h3>
-                <p class="mb-4">Se tiver alguma dúvida sobre esta Política de Privacidade, entre em contato conosco:</p>
-                <p class="mb-4">Unica Serviços de Instalação e Manutenção LTDA</p>
-                <p class="mb-4">CNPJ: 12.431.994/0001-80</p>
-                <p class="mb-4">Email: contato@unicaservicos.com.br</p>
-            </div>
-        </section>
-    </div>
-
-    <!-- Footer -->
-    <footer class="bg-green-800 text-white p-6 text-center">
-        <div class="container mx-auto">
-            <p>&copy; 2026 Unica Serviços de Instalação e Manutenção LTDA. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-
-    <script>
-        function showSection(sectionId) {
-            // Oculta todas as seções
-            const sections = document.querySelectorAll('.hidden-section');
-            sections.forEach(section => {
-                section.classList.remove('active');
-            });
-
-            // Mostra a seção selecionada
-            const activeSection = document.getElementById(sectionId + '-section');
-            if (activeSection) {
-                activeSection.classList.add('active');
-            }
-
-            // Scroll para o topo
-            window.scrollTo(0, 0);
-        }
-
-        // Mostra a seção inicial ao carregar a página
-        window.addEventListener('load', function() {
-            showSection('home');
-        });
-    </script>
+</div>
 
 </body>
 </html>
